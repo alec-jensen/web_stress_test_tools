@@ -37,4 +37,4 @@ By default, the tool logs at the INFO level. If the `-v` or `--verbose` flag is 
 ## Todo
 
 [ ] Support python 3.13 subinterpreters
-[ ] Support more methods like http flood, slowloris, http fast reset, etc.
+[ ] Support more methods like slowloris, http fast reset, etc.
