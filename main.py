@@ -10,7 +10,7 @@ parser.add_argument('-p', '--port', help='Target port',
 parser.add_argument('-t', '--threads', help='Number of threads',
                     required=False, type=int, default=4)
 parser.add_argument('-m', '--method', help='Method',
-                    required=True, choices=['syn'])
+                    required=True, choices=['syn', 'http_flood'])
 parser.add_argument('-v', '--verbose', help='Verbose',
                     required=False, action='store_true', default=False)
 
@@ -23,3 +23,6 @@ else:
 
 if args.method == 'syn':
     web_stress_tools.syn(args.ip, int(args.port), int(args.threads))
+
+elif args.method == 'http_flood':
+    web_stress_tools.http_flood(args.ip, int(args.port), int(args.threads))
