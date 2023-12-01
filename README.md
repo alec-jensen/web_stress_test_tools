@@ -5,7 +5,12 @@ This is a command-line tool for performing stress tests on web servers. It uses 
 ## Usage
 
 ```bash
-python main.py -i <ip> -p <port> -m <method> [-t <threads>] [-v]
+sudo pip install -r requirements.txt # Install dependencies
+
+# Because this tool uses raw sockets, it must be run as root or with
+# the permissions to create raw sockets (CAP_NET_RAW capability).
+# The easiest way to do this is to run it with sudo.
+sudo python main.py -i <ip> -p <port> -m <method> [-t <threads>] [-v]
 ```
 
 ## Arguments
